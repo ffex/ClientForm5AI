@@ -1,0 +1,10 @@
+C:\Users\basso\source\repos\ClientForm5AI\ClientForm5AI\bin\Debug\ClientForm5AI.exe.config
+C:\Users\basso\source\repos\ClientForm5AI\ClientForm5AI\bin\Debug\ClientForm5AI.exe
+C:\Users\basso\source\repos\ClientForm5AI\ClientForm5AI\bin\Debug\ClientForm5AI.pdb
+C:\Users\basso\source\repos\ClientForm5AI\ClientForm5AI\obj\Debug\ClientForm5AI.csprojAssemblyReference.cache
+C:\Users\basso\source\repos\ClientForm5AI\ClientForm5AI\obj\Debug\ClientForm5AI.Form1.resources
+C:\Users\basso\source\repos\ClientForm5AI\ClientForm5AI\obj\Debug\ClientForm5AI.Properties.Resources.resources
+C:\Users\basso\source\repos\ClientForm5AI\ClientForm5AI\obj\Debug\ClientForm5AI.csproj.GenerateResource.cache
+C:\Users\basso\source\repos\ClientForm5AI\ClientForm5AI\obj\Debug\ClientForm5AI.csproj.CoreCompileInputs.cache
+C:\Users\basso\source\repos\ClientForm5AI\ClientForm5AI\obj\Debug\ClientForm5AI.exe
+C:\Users\basso\source\repos\ClientForm5AI\ClientForm5AI\obj\Debug\ClientForm5AI.pdb
