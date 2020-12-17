@@ -49,8 +49,67 @@ namespace ClientForm5AI
                 errori = true;
             }
 
-            if (!errori) { 
-                client.Connect(ipaddr, nPort);
+            if (!errori) {
+                try { 
+                    client.Connect(ipaddr, nPort);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Errore");
+                    if (client != null)
+                    {
+                        if (client.Connected)
+                        {
+                            client.Shutdown(SocketShutdown.Both);
+                        }
+                        client.Close();
+                        client.Dispose();
+                    }
+
+                }
+
+
+                txtIPServer.Enabled = false;
+                txtPorta.Enabled = false;
+                btnConnetti.Enabled = false;
+
+                txtMessaggio.Enabled = true;
+                btnInvia.Enabled = true;
+            }
+
+        }
+
+        private void btnInvia_Click(object sender, EventArgs e)
+        {
+            byte[] sendBuff = new byte[512];
+            byte[] recvBuff = new byte[512];
+            string recvString = "";
+            int nRecvBytes = 0;
+
+            try
+            {
+                sendBuff = Encoding.ASCII.GetBytes(txtMessaggio.Text);
+                client.Send(sendBuff);
+
+
+                nRecvBytes = client.Receive(recvBuff);
+                recvString = Encoding.ASCII.GetString(recvBuff, 0, nRecvBytes);
+
+                lstMessaggiServ.Items.Add(recvString);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Errore");
+                if (client != null)
+                {
+                    if (client.Connected)
+                    {
+                        client.Shutdown(SocketShutdown.Both);
+                    }
+                    client.Close();
+                    client.Dispose();
+                }
+
             }
 
         }

@@ -55,6 +55,7 @@ namespace ClientForm5AI
             this.txtIPServer.Name = "txtIPServer";
             this.txtIPServer.Size = new System.Drawing.Size(100, 22);
             this.txtIPServer.TabIndex = 1;
+            this.txtIPServer.Text = "127.0.0.1";
             // 
             // label2
             // 
@@ -71,6 +72,7 @@ namespace ClientForm5AI
             this.txtPorta.Name = "txtPorta";
             this.txtPorta.Size = new System.Drawing.Size(100, 22);
             this.txtPorta.TabIndex = 3;
+            this.txtPorta.Text = "23000";
             // 
             // btnConnetti
             // 
@@ -93,6 +95,7 @@ namespace ClientForm5AI
             // 
             // txtMessaggio
             // 
+            this.txtMessaggio.Enabled = false;
             this.txtMessaggio.Location = new System.Drawing.Point(98, 63);
             this.txtMessaggio.Name = "txtMessaggio";
             this.txtMessaggio.Size = new System.Drawing.Size(250, 22);
@@ -100,12 +103,14 @@ namespace ClientForm5AI
             // 
             // btnInvia
             // 
+            this.btnInvia.Enabled = false;
             this.btnInvia.Location = new System.Drawing.Point(387, 55);
             this.btnInvia.Name = "btnInvia";
             this.btnInvia.Size = new System.Drawing.Size(75, 38);
             this.btnInvia.TabIndex = 7;
             this.btnInvia.Text = "Invia";
             this.btnInvia.UseVisualStyleBackColor = true;
+            this.btnInvia.Click += new System.EventHandler(this.btnInvia_Click);
             // 
             // lstMessaggiServ
             // 
